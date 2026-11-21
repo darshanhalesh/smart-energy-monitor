@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #20242a;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: #20242a;
+  color: white;
+}
+
+button.secondary {
+  background: #e3e7eb;
+  color: #20242a;
+}
+
+.login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: min(420px, 100%);
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px #00000012;
+}
+
+.login-card input {
+  width: 100%;
+  margin: 7px 0;
+  padding: 12px;
+  border: 1px solid #ccd2d8;
+  border-radius: 8px;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.page {
+  width: min(1150px, 94%);
+  margin: 30px auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0 0;
+  color: #68717b;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.card,
+.panel,
+.control {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 3px 14px #0000000b;
+}
+
+.card span {
+  display: block;
+  color: #68717b;
+  font-size: 14px;
+}
+
+.card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 24px;
+}
+
+.control {
+  margin: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.on {
+  color: #18794e;
+}
+
+.off {
+  color: #a33b3b;
+}
+
+.panel {
+  margin-top: 14px;
+}
+
+.chart {
+  height: 320px;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.alert,
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0f2;
+}
+
+.error {
+  background: #fff0f0;
+  border: 1px solid #e6b7b7;
+  color: #8b2525;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+@media (max-width: 850px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
